@@ -32,9 +32,15 @@ class Communities extends StatelessWidget {
       '8/11/2024',
       'Yesterday',
       '7/11/2024',
+      '8/11/2024',
+      'Yesterday',
+      '7/11/2024',
 
     ];
     List<Image> images = [
+      Image.asset('images/WhatsApp Image 2024-11-07 at 22.13.49.jpeg'),
+      Image.asset('images/WhatsApp Image 2024-11-07 at 22.10.12.jpeg'),
+      Image.asset('images/WhatsApp Image 2024-11-07 at 22.01.51.jpeg'),
       Image.asset('images/WhatsApp Image 2024-11-07 at 22.13.49.jpeg'),
       Image.asset('images/WhatsApp Image 2024-11-07 at 22.10.12.jpeg'),
       Image.asset('images/WhatsApp Image 2024-11-07 at 22.01.51.jpeg'),
@@ -75,15 +81,30 @@ class Communities extends StatelessWidget {
               margin: EdgeInsets.only(bottom: 15),
               child: Row(
                 children: [
-                  Container(
-                    margin: EdgeInsets.only(left: 15, top: 15),
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey,
-                        shape: BoxShape.rectangle),
-                    child: Icon(Icons.group,size: 30,),
+                  Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(left: 15, top: 15),
+                        height: size.height*.07,
+                        width: size.height*.07,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.grey,
+                            shape: BoxShape.rectangle),
+                        child: Icon(Icons.group,size: 30,),
+                      ),
+                      Positioned(
+                        bottom: -13,
+                        right: 0,
+                        child: Container(width: size.width*.06,
+                          height: size.height*.06,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.green
+                        ),
+                        child: Center(child: Icon(Icons.add,size: 18,)),),
+                      )
+                    ],
                   ),
                   Container(
                     margin: EdgeInsets.only(left: 15, top: 20),
@@ -97,7 +118,7 @@ class Communities extends StatelessWidget {
               ),
             ),
             Container(
-              height: 10,
+              height: size.height*.01,
               decoration: BoxDecoration(color: Colors.black),
             ),
             Container(
@@ -110,7 +131,7 @@ class Communities extends StatelessWidget {
                   ),
                   Container(
                       alignment: Alignment.centerLeft,
-                      margin: EdgeInsets.only(left: 15, top: 5),
+                      margin: EdgeInsets.only(left: 16, top: 5),
                       child: Text(
                         'Time story',
                         style: TextStyle(color: Colors.white, fontSize: 18),
@@ -120,7 +141,7 @@ class Communities extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.only(top: 5),
-              height: 0.3,
+              height: size.height*.0005,
               decoration: BoxDecoration(color: Colors.grey),
             ),
             SizedBox(
@@ -132,8 +153,11 @@ class Communities extends StatelessWidget {
                           community1[index],
                           style: TextStyle(color: Colors.white),
                         ),
-                        leading: CircleAvatar(
-                          backgroundImage: images[index].image,
+                        leading: Padding(
+                          padding: const EdgeInsets.only(left: 5.0),
+                          child: CircleAvatar( radius: 22,
+                            backgroundImage: images[index].image,
+                          ),
                         ),
                         trailing: Text(
                           times[index],
@@ -147,7 +171,7 @@ class Communities extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.only(left: 15, top: 20),
-              height: 50,
+              height: size.height*.05,
               child: Row(
                 children: [
                   Icon(
@@ -165,7 +189,7 @@ class Communities extends StatelessWidget {
               ),
             ),
             Container(
-              height: 10,
+              height: size.height*.01,
               decoration: BoxDecoration(color: Colors.black),
             ),
             Container(
@@ -200,8 +224,11 @@ class Communities extends StatelessWidget {
                           ChannelNames[index],
                           style: TextStyle(color: Colors.white),
                         ),
-                        leading: CircleAvatar(
-                          backgroundImage: images[index].image,
+                        leading: Padding(
+                          padding: const EdgeInsets.only(left: 5.0),
+                          child: CircleAvatar(radius: 22,
+                            backgroundImage: images[index].image,
+                          ),
                         ),
                         trailing: Text(
                           times[index],
@@ -215,7 +242,7 @@ class Communities extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.only(left: 15, top: 20),
-              height: 50,
+              height: size.height*.05,
               child: Row(
                 children: [
                   Icon(
@@ -233,7 +260,7 @@ class Communities extends StatelessWidget {
               ),
             ),
             Container(
-              height: 10,
+              height: size.height*.01,
               decoration: BoxDecoration(color: Colors.black),
             ),
           ],

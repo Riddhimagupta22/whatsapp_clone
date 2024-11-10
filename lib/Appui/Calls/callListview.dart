@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Appui/Calls/callListTitle.dart';
+import 'package:whatsapp_clone/Appui/Calls/favouritelisttile.dart';
 
 class Calllistview extends StatefulWidget {
   const Calllistview({super.key});
@@ -13,8 +14,27 @@ class _CalllistviewState extends State<Calllistview> {
   Widget build(BuildContext context) {
     return
       ListView(
-        children: [ Padding(
-          padding: const EdgeInsets.only(left: 15.0),
+        children: [
+          Container(
+            child: Row(
+              children: [
+                Padding(
+                padding: const EdgeInsets.only(left: 15.0,top: 10),
+                child: Text("Favourities",style: TextStyle(fontWeight:FontWeight.w500 ,fontSize:16,color: Colors.white,),),
+                        ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 205.0),
+                  child: Text('More',style: TextStyle(fontWeight:FontWeight.w500 ,fontSize:16,color: Colors.green,),),
+                )
+              ],
+            ),
+
+          ),
+
+
+
+          Padding(
+          padding: const EdgeInsets.only(left: 15.0,top: 10),
           child: Text("Recent",style: TextStyle(fontWeight:FontWeight.w500 ,fontSize:16,color: Colors.white,),),
         ),
           Calllisttitle('images/WhatsApp Image 2024-11-07 at 16.22.24 (1).jpeg', 'Mia', Icons.call_made_sharp,

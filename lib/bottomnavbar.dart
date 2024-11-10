@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Appui/Calls/calls.dart';
 import 'package:whatsapp_clone/Appui/Communities/communities.dart';
 import 'package:whatsapp_clone/Appui/Updates/updatepage.dart';
-import 'package:whatsapp_clone/Appui/Updates/updates.dart';
 import 'package:whatsapp_clone/Widgets/home.dart';
 
 class BottomBar extends StatefulWidget {
@@ -32,8 +31,8 @@ class _BottomBarState extends State<BottomBar> {
           Calls(),
         ],
       ),
-      bottomNavigationBar: Container(
-        child: BottomNavigationBar(
+      bottomNavigationBar:
+        BottomNavigationBar(
           iconSize: 25,
           selectedItemColor: Colors.green,
           unselectedItemColor: Colors.white60,
@@ -66,7 +65,7 @@ class _BottomBarState extends State<BottomBar> {
             ),
           ],
         ),
-      ),
+
     );
   }
 }

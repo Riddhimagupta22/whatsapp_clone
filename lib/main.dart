@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/bottomnavbar.dart';
+import 'package:whatsapp_clone/navigationrail.dart';
+
+
 import 'Widgets/home.dart';
 
 void main() {
