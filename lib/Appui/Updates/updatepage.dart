@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/Appui/Updates/criclelistview.dart';
+import 'package:whatsapp_clone/Appui/Updates/Circle/criclelistview.dart';
 import 'package:whatsapp_clone/Appui/Updates/updatelistview.dart';
+import 'package:whatsapp_clone/Screens/Settings/settings.dart';
+import 'package:whatsapp_clone/Screens/Updates/status_privacy.dart';
 
 class Updatepage extends StatelessWidget {
   const Updatepage({super.key});
@@ -32,20 +34,32 @@ class Updatepage extends StatelessWidget {
                 color: Colors.white,
               )),
           PopupMenuButton(
+              onSelected: (value){
+                if ( value == 'status_privacy'){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const StatusPrivacypage()));
+                }else if ( value == 'create_channel'){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Settingpage()));
+                }else if ( value == 'settings'){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Settingpage()));
+                }
+              },
               color: Color(0xff0a131a),
               itemBuilder: (BuildContext context) {
                 return [
                   PopupMenuItem(
+                    value: 'status_privacy' ,
                       child: Text(
                     "Status privacy",
                     style: TextStyle(color: Colors.white),
                   )),
                   PopupMenuItem(
+                  value: 'create_channel',
                       child: Text(
                     "Create channel",
                     style: TextStyle(color: Colors.white),
                   )),
                   PopupMenuItem(
+                value: 'settings',
                       child: Text(
                     "Settings",
                     style: TextStyle(color: Colors.white),
@@ -53,6 +67,11 @@ class Updatepage extends StatelessWidget {
                 ];
               })
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.green,
+        onPressed: () {},
+        child: Icon(Icons.camera_alt_rounded),
       ),
       body: Container(
         height: double.infinity,
@@ -74,23 +93,6 @@ class Updatepage extends StatelessWidget {
                   )),
             ),
             Criclelistview(),
-            // SizedBox(
-            //   height: 80,
-            //   child: ListView.builder(
-            //     shrinkWrap: true,
-            //       itemCount: 6,
-            //       scrollDirection: Axis.horizontal,
-            //       itemBuilder: (context, index) {
-            //         return Container(
-            //           height: 100,
-            //           width: 100,
-            //           padding: const EdgeInsets.all(8.0),
-            //           decoration: BoxDecoration(
-            //               color: Colors.red,
-            //               borderRadius: BorderRadius.circular(100)),
-            //         );
-            //       }),
-            // ),
             Row(
               children: [
                 SizedBox(width: size.width * .05),

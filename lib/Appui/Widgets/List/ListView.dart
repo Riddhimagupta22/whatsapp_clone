@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/Widgets/listtitle.dart';
+import 'package:whatsapp_clone/Appui/Widgets/List/listtitle.dart';
 
 class Listview extends StatefulWidget {
   const Listview({super.key});

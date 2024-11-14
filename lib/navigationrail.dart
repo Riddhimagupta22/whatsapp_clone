@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Appui/Calls/calls.dart';
 import 'package:whatsapp_clone/Appui/Communities/communities.dart';
 import 'package:whatsapp_clone/Appui/Updates/updatepage.dart';
-import 'package:whatsapp_clone/Widgets/home.dart';
+import 'package:whatsapp_clone/Appui/Widgets/home.dart';
 
 double bigScreenWidth = 640.0;
 
@@ -23,30 +23,42 @@ class _NavigationrailState extends State<Navigationrail> {
       return Scaffold(
         body: Row(
           children: [
-            NavigationRail(destinations: const [
-              NavigationRailDestination(
-                icon: Icon(Icons.chat),
-                label: Text('Chats'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.update),
-                label: Text('Updates'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.people_outline),
-                label: Text('Communities'),
-              ),
-              NavigationRailDestination(
-                icon: Icon(Icons.call_outlined),
-                label: Text('Calls'),
-              ),
-            ], selectedIndex: _selectedIndex,
+            NavigationRail(
+
+              labelType: NavigationRailLabelType.all,
+              selectedLabelTextStyle: TextStyle(color: Colors.green),
+              unselectedLabelTextStyle: TextStyle(color: Colors.white),
+              unselectedIconTheme: IconThemeData(color: Colors.white, size: 25),
+              selectedIconTheme: IconThemeData(color: Colors.green, size: 30),
+              backgroundColor: Color(0xff0a131a),
+
+
+              destinations: const [
+                NavigationRailDestination(
+                  icon: Icon(Icons.chat),
+                  label: Text('Chats'),
+                ),
+                NavigationRailDestination(
+                  icon: Icon(Icons.update),
+                  label: Text('Updates'),
+                ),
+                NavigationRailDestination(
+                  icon: Icon(Icons.people_outline),
+                  label: Text('Communities'),
+                ),
+                NavigationRailDestination(
+                  icon: Icon(Icons.call_outlined),
+                  label: Text('Calls'),
+                ),
+              ],
+              selectedIndex: _selectedIndex,
               onDestinationSelected: (index) {
                 setState(() {
                   _selectedIndex = index;
                 });
                 _pageViewController.jumpToPage(index);
-              },),
+              },
+            ),
             Expanded(
               child: PageView(
                 controller: _pageViewController,
@@ -72,7 +84,7 @@ class _NavigationrailState extends State<Navigationrail> {
           controller: _pageViewController,
           onPageChanged: (index) {
             setState(() {
-              _selectedIndex = index;
+              var i = _selectedIndex = index;
             });
           },
           children: [
@@ -119,6 +131,5 @@ class _NavigationrailState extends State<Navigationrail> {
         ),
       );
     }
-
   }
 }

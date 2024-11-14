@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/Appui/Calls/calls.dart';
 import 'package:whatsapp_clone/Appui/Communities/communities.dart';
 import 'package:whatsapp_clone/Appui/Updates/updatepage.dart';
-import 'package:whatsapp_clone/Widgets/home.dart';
+import 'package:whatsapp_clone/Appui/Widgets/home.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar();

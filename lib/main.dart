@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/navigationrail.dart';
-import 'Widgets/home.dart';
+import 'package:whatsapp_clone/Appui/Widgets/home.dart';
+import 'package:whatsapp_clone/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: "Whatsapp Clone",
       debugShowCheckedModeBanner: false,
       color: Colors.red,
-      home: Navigationrail(),
+      home: SplashScreen(),
     );
   }
 }
