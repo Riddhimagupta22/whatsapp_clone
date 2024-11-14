@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_clone/Screens/Settings/settings.dart';
 
 class Communities extends StatelessWidget {
   const Communities({super.key});
@@ -35,7 +36,6 @@ class Communities extends StatelessWidget {
       '8/11/2024',
       'Yesterday',
       '7/11/2024',
-
     ];
     List<Image> images = [
       Image.asset('images/WhatsApp Image 2024-11-07 at 22.13.49.jpeg'),
@@ -55,21 +55,26 @@ class Communities extends StatelessWidget {
             textAlign: TextAlign.left,
             'Communities'),
         actions: [
-
           IconButton(
               onPressed: () {},
               icon: Icon(Icons.photo_camera_outlined),
               color: Colors.white),
           PopupMenuButton(
+              onSelected: (value) {
+                if (value == 'settings') {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Settingpage()));
+                }
+              },
               color: Color(0xff0a131a),
               itemBuilder: (BuildContext context) {
                 return [
                   PopupMenuItem(
+                      value: "settings",
                       child: Text(
                         "Settings",
                         style: TextStyle(color: Colors.white),
                       )),
-
                 ];
               })
         ],
@@ -85,24 +90,31 @@ class Communities extends StatelessWidget {
                     children: [
                       Container(
                         margin: EdgeInsets.only(left: 15, top: 15),
-                        height: size.height*.07,
-                        width: size.height*.07,
+                        height: size.height * .07,
+                        width: size.height * .07,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.grey,
                             shape: BoxShape.rectangle),
-                        child: Icon(Icons.group,size: 30,),
+                        child: Icon(
+                          Icons.group,
+                          size: 30,
+                        ),
                       ),
                       Positioned(
                         bottom: -13,
                         right: 0,
-                        child: Container(width: size.width*.06,
-                          height: size.height*.06,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.green
+                        child: Container(
+                          width: size.width * .06,
+                          height: size.height * .06,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle, color: Colors.green),
+                          child: Center(
+                              child: Icon(
+                            Icons.add,
+                            size: 18,
+                          )),
                         ),
-                        child: Center(child: Icon(Icons.add,size: 18,)),),
                       )
                     ],
                   ),
@@ -118,7 +130,7 @@ class Communities extends StatelessWidget {
               ),
             ),
             Container(
-              height: size.height*.01,
+              height: size.height * .01,
               decoration: BoxDecoration(color: Colors.black),
             ),
             Container(
@@ -127,7 +139,8 @@ class Communities extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 27,
-                    backgroundImage: AssetImage('images/WhatsApp Image 2024-11-07 at 16.22.24 (1).jpeg'),
+                    backgroundImage: AssetImage(
+                        'images/WhatsApp Image 2024-11-07 at 16.22.24 (1).jpeg'),
                   ),
                   Container(
                       alignment: Alignment.centerLeft,
@@ -141,7 +154,7 @@ class Communities extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.only(top: 5),
-              height: size.height*.0005,
+              height: size.height * .0005,
               decoration: BoxDecoration(color: Colors.grey),
             ),
             SizedBox(
@@ -155,7 +168,8 @@ class Communities extends StatelessWidget {
                         ),
                         leading: Padding(
                           padding: const EdgeInsets.only(left: 5.0),
-                          child: CircleAvatar( radius: 22,
+                          child: CircleAvatar(
+                            radius: 22,
                             backgroundImage: images[index].image,
                           ),
                         ),
@@ -171,7 +185,7 @@ class Communities extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.only(left: 15, top: 20),
-              height: size.height*.05,
+              height: size.height * .05,
               child: Row(
                 children: [
                   Icon(
@@ -189,7 +203,7 @@ class Communities extends StatelessWidget {
               ),
             ),
             Container(
-              height: size.height*.01,
+              height: size.height * .01,
               decoration: BoxDecoration(color: Colors.black),
             ),
             Container(
@@ -198,7 +212,8 @@ class Communities extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 27,
-                    backgroundImage: AssetImage('images/WhatsApp Image 2024-11-07 at 16.22.24 (1).jpeg'),
+                    backgroundImage: AssetImage(
+                        'images/WhatsApp Image 2024-11-07 at 16.22.24 (1).jpeg'),
                   ),
                   Container(
                       alignment: Alignment.centerLeft,
@@ -226,7 +241,8 @@ class Communities extends StatelessWidget {
                         ),
                         leading: Padding(
                           padding: const EdgeInsets.only(left: 5.0),
-                          child: CircleAvatar(radius: 22,
+                          child: CircleAvatar(
+                            radius: 22,
                             backgroundImage: images[index].image,
                           ),
                         ),
@@ -242,7 +258,7 @@ class Communities extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.only(left: 15, top: 20),
-              height: size.height*.05,
+              height: size.height * .05,
               child: Row(
                 children: [
                   Icon(
@@ -260,7 +276,7 @@ class Communities extends StatelessWidget {
               ),
             ),
             Container(
-              height: size.height*.01,
+              height: size.height * .01,
               decoration: BoxDecoration(color: Colors.black),
             ),
           ],
