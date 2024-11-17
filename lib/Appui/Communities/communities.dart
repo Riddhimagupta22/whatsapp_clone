@@ -79,6 +79,7 @@ class Communities extends StatelessWidget {
               })
         ],
       ),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
