@@ -12,7 +12,7 @@ class _CreateChannelpageState extends State<CreateChannelpage> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
       child: Column(
         children: [ Image(image: AssetImage("images/net-removebg-preview.png", ),height: size.height*.1 ,),
           Center(

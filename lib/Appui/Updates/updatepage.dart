@@ -29,6 +29,13 @@ class _UpdatepageState extends State<Updatepage> {
         actions: [
           IconButton(
               onPressed: () {},
+              icon: const Icon(
+                Icons.qr_code_scanner,
+                size: 25,
+                color: Colors.white,
+              )),
+          IconButton(
+              onPressed: () {},
               icon: Icon(
                 Icons.camera_alt_outlined,
                 size: 25,
@@ -138,7 +145,7 @@ class _UpdatepageState extends State<Updatepage> {
 
   void _showBottomSheet(BuildContext context ){
     var size  = MediaQuery.of(context).size;
-    showModalBottomSheet( isScrollControlled: true,
+    showModalBottomSheet(
       backgroundColor: Color(0xff0a131a),
       context: context, builder: (context){ 
       return Container(

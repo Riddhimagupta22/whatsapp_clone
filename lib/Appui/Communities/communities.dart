@@ -32,10 +32,10 @@ class Communities extends StatelessWidget {
     List<String> times = [
       '8/11/2024',
       'Yesterday',
-      '7/11/2024',
-      '8/11/2024',
+      '7/11/24',
+      '8/11/24',
       'Yesterday',
-      '7/11/2024',
+      '7/11/24',
     ];
     List<Image> images = [
       Image.asset('images/WhatsApp Image 2024-11-07 at 22.13.49.jpeg'),
@@ -55,6 +55,13 @@ class Communities extends StatelessWidget {
             textAlign: TextAlign.left,
             'Communities'),
         actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.qr_code_scanner,
+                size: 25,
+                color: Colors.white,
+              )),
           IconButton(
               onPressed: () {},
               icon: Icon(Icons.photo_camera_outlined),
@@ -91,8 +98,8 @@ class Communities extends StatelessWidget {
                     children: [
                       Container(
                         margin: EdgeInsets.only(left: 15, top: 15),
-                        height: size.height * .07,
-                        width: size.height * .07,
+                        height: size.height * .065,
+                        width: size.height * .065,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: Colors.grey,

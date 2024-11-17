@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 1), () {
+    Timer(Duration(seconds: 4), () {
       Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => Navigationrail()));
     });
@@ -28,15 +28,25 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 160),
+            padding: const EdgeInsets.only(top: 300.0),
             child: Center(
-              child: Image(
-                image: AssetImage("images/whatsapp-removebg-preview.png"),
-                height: size.height * .5,
-                width: size.width * .4,
+              child: TweenAnimationBuilder(
+                tween: Tween<double>(begin: 30, end: 100),
+                duration: Duration(seconds: 2),
+                builder: (BuildContext context, double value, child) {
+                  return InkWell(
+                    child: CircleAvatar(
+                      backgroundColor:  Color(0xff0a131a),
+                      backgroundImage: AssetImage(
+                          "images/whatsapp-removebg-preview.png"),
+                      radius: value,
+                    ),
+                  );
+                },
               ),
             ),
           ),
+          SizedBox(height: size.height*.25,),
           Text(
             'from',
             style: TextStyle(
@@ -50,16 +60,23 @@ class _SplashScreenState extends State<SplashScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Row(
                 children: [
-              Center(
-                child: Image(image: AssetImage("images/metalogo-removebg-preview.png"),
-                height: size.height*.02,),
-              ),
-                  SizedBox(width: size.width*.01,),
                   Center(
-                    child: Text("Meta",style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600),),
+                    child: Image(
+                      image: AssetImage("images/metalogo-removebg-preview.png"),
+                      height: size.height * .02,
+                    ),
+                  ),
+                  SizedBox(
+                    width: size.width * .01,
+                  ),
+                  Center(
+                    child: Text(
+                      "Meta",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
                   )
                 ],
               ),

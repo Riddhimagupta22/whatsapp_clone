@@ -27,22 +27,19 @@ class _State extends State<HomePage> {
           IconButton(
               onPressed: () {},
               icon: const Icon(
+                Icons.qr_code_scanner,
+                size: 25,
+                color: Colors.white,
+              )),
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
                 Icons.camera_alt_outlined,
                 size: 25,
                 color: Colors.white,
               )),
           Popmenubuttonpage(),
-          Builder(builder: (context) {
-            return IconButton(
-                onPressed: () {
-                  Scaffold.of(context).openEndDrawer();
-                },
-                icon: const Icon(
-                  Icons.menu,
-                  size: 25,
-                  color: Colors.white,
-                ));
-          }),
+
         ],
       ),
       floatingActionButton: FloatingActionButton(
@@ -50,11 +47,7 @@ class _State extends State<HomePage> {
         onPressed: () {},
         child: Icon(Icons.chat),
       ),
-      endDrawerEnableOpenDragGesture: true,
-      endDrawer: Drawer(
-        backgroundColor: const Color(0xff0a131a),
-        child: Drawerlistview(),
-      ),
+
       body: Container(
         height: double.infinity,
         width: double.infinity,
