@@ -5,7 +5,7 @@ A Flutter-based frontend for a WhatsApp clone application that replicates the co
 ## Features
 
 - ***Chat Screen*** : Displays a list of chats with contacts. Chat Screen: Shows the conversation with a contact.
-- ***Status Screen***  : Displays the status updates from contacts. Calls Screen: Lists recent calls and call logs.
+- ***Status Screen*** : Displays the status updates from contacts. Calls Screen: Lists recent calls and call logs.
 - ***Bottom Navigation Bar*** : For easy navigation between chats, status, and calls.
 
 ## App Ui
@@ -15,7 +15,7 @@ A Flutter-based frontend for a WhatsApp clone application that replicates the co
 <img src = "https://github.com/user-attachments/assets/7fd1cfdb-38cd-4c32-be91-6b2cb0096850" height="500" width="220"/>
 <img src = "https://github.com/user-attachments/assets/81d47abd-7413-4767-9ab3-fd2ec3ee9abc" height="500" width="220"/>
 <img src = "https://github.com/user-attachments/assets/37bab789-dee5-435c-9ea3-09d06192381d" height="500" width="220"/> 
-<img src = "!https://github.com/user-attachments/assets/8ed7e1d2-2f9e-4792-ab74-fc4153d32c62" height="500" width="220"/> 
+<img src = "https://github.com/user-attachments/assets/8ed7e1d2-2f9e-4792-ab74-fc4153d32c62" height="500" width="220"/> 
 <img src = "https://github.com/user-attachments/assets/8095e5f5-6d1a-4736-988a-be149d2c295a" height="500" width="220"/>  
 <img src = "https://github.com/user-attachments/assets/03c195f9-d76f-4321-a5df-e1bfac0cffdd"  height="500" width="220"/> 
 <img src = "https://github.com/user-attachments/assets/18002e18-31f5-42f5-bfb5-75b48317e062"  height="500" width="220"/> 
