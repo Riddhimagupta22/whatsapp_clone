@@ -12,13 +12,9 @@ class _LinkedDevicePageState extends State<LinkedDevicePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings',style: TextStyle(
+        title: Text('Linked devices',style: TextStyle(
             color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),),
         backgroundColor: const Color(0xff0a131a),
-        actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.search,  size: 25,
-            color: Colors.white,))
-        ],
       ),
       backgroundColor: Color(0xff0a131a),
     );
