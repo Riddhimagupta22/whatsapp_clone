@@ -16,9 +16,8 @@ A Flutter-based frontend for a WhatsApp clone application that replicates the co
   2. 📽️ **Status Updates** : Layout to showcase user statuses.
   3. 📞 **Call Page** : Organised logs for recent calls with call times.
   4. ⚙️ **Settings Page** : Customization options and profile details.
-
-  
 <br>
+
 ## 📷App Ui
 
 <img src = "https://github.com/user-attachments/assets/d6473590-af6f-41f6-b03e-41ac634dcef4" height="500" width="220"/>
